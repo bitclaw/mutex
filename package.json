@@ -1,0 +1,51 @@
+{
+  "name": "@bitclaw/mutex",
+  "version": "0.1.0",
+  "license": "MIT",
+  "description": "Promise mutex, per-key mutex map and retry with backoff. Zero dependencies, any runtime: Node, Bun, browsers, React Native.",
+  "files": [
+    "dist",
+    "LICENSE",
+    "README.md"
+  ],
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "test": "bun test",
+    "test:watch": "bun test --watch",
+    "typecheck": "tsc --noEmit",
+    "lint": "biome check",
+    "lint:fix": "biome check --write",
+    "format": "biome format --write",
+    "knip": "knip",
+    "prepublishOnly": "npm run build && npm test",
+    "publish:patch": "npm version patch && git push --follow-tags",
+    "publish:minor": "npm version minor && git push --follow-tags",
+    "publish:major": "npm version major && git push --follow-tags"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "2.4.15",
+    "knip": "6.12.2",
+    "@types/bun": "1.3.13",
+    "typescript": "5.9.3"
+  },
+  "keywords": [
+    "mutex",
+    "lock",
+    "retry",
+    "backoff",
+    "react-native"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bitclaw/mutex.git"
+  }
+}
