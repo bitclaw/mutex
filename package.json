@@ -1,6 +1,6 @@
 {
   "name": "@bitclaw/mutex",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "license": "MIT",
   "description": "Promise mutex, per-key mutex map and retry with backoff. Zero dependencies, any runtime: Node, Bun, browsers, React Native.",
   "files": [
